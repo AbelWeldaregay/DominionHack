@@ -1,10 +1,10 @@
 <?php
 	class DatabaseConnection{
 	    // Database details
-	    private $host = "";
-	    private $db_name = "fordFanatics";
-	    private $username = "";
-	    private $password = "";
+	    private $host = "handson-mysql";
+	    private $db_name = "cs418";
+	    private $username = "kumar";
+	    private $password = "kumar";
 	    public function getConnection(){
 	        $this->conn = null;
 	        try{

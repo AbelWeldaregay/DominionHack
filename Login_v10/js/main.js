@@ -48,9 +48,37 @@
 
 $('.customerButton').on('click', function(e){
 
-    //location.replace("file:///Users/abelweldareguy/Downloads/colorlib-regform-1/customerRegister.html");
     window.location.href = "http://qav2.cs.odu.edu/abel/DomHack/colorlib-regform-1/customerRegister.html";
+
 });
+
+$('.loginButton').on('click', function(e){
+
+    var email = document.getElementById('usernameInput').value;
+    var password = document.getElementById('passwordInput').value;
+
+      e.preventDefault();
+      $.ajax({
+
+              url : '../services/controller.php',
+              type : 'POST',
+              data : {
+               "email" : email,
+               "password" : password,
+               "loginRequest" : "loginRequest"
+              },
+              
+              success : function(data) {   
+                console.log(data);
+                alert(data);
+
+                 
+              }
+        }); 
+
+
+});
+
 
 $('.providerButton').on('click', function(e){
 
