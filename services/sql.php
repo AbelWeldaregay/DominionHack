@@ -22,6 +22,12 @@ class SqlService {
 		return $sql;
 
 	}
+
+	public function userExistsSql($email) {
+
+		$sql = "SELECT * FROM Customers WHERE email = '$email'";
+		return $sql;
+	}
 	
 }
 

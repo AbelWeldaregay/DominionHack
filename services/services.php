@@ -34,9 +34,24 @@ class WebService {
   	    $conn = $database_connection->getConnection();
 		$sql_service = new SqlService();
 
-		$insertCustomerSql = $sql_service->insertCustomerSql($name, $email, $phoneNumber, $address, $age, $gender, $password);
+		$userExistsSql = $sql_service->userExistsSql($email);
 
-		$result = $conn->query($insertCustomerSql);
+		$userExistsResult = $conn->query($userExistsSql);
+
+		if($userExistsResult->num_rows > 0) {
+		
+			echo "customerExists";
+		
+		} else {
+			
+			$insertCustomerSql = $sql_service->insertCustomerSql($name, $email, $phoneNumber, $address, $age, $gender, $password);
+
+			$result = $conn->query($insertCustomerSql);
+			
+			echo "success";
+
+		}
+
 		
 		$conn->close();
 

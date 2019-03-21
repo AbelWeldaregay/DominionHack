@@ -104,8 +104,13 @@ $( document ).ready(function() {
               
               success : function(data) {   
                 
-                console.log(data);
-                    
+                if(data == "customerExists")
+                {
+                    alert("Account with this email exists, please login using this email.");
+                } else {
+                    alert("Successfully created account, please login");
+                    location.reload();
+                }
               }
         }); 
 

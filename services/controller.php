@@ -29,8 +29,10 @@ include_once "services.php";
  	$password = $_POST["password"];
 	
 	$webService = new webService();
-	$insertCustomerSql = $webService -> insertCustomer($name, $email, $phoneNumber, $address, $age, $gender, $password);
-	echo $insertCustomerSql;
+	$result = $webService -> insertCustomer($name, $email, $phoneNumber, $address, $age, $gender, $password);
+	
+	echo $result;
+
 
  }
 
