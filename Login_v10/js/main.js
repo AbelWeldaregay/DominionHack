@@ -70,7 +70,12 @@ $('.loginButton').on('click', function(e){
               
               success : function(data) {   
                 console.log(data);
-                alert(data);
+                    
+                    if(data == "true") {
+                    window.location.href = "http://qav2.cs.odu.edu/abel/DomHack/home.html";
+                    } else {
+                        alert("Wrong password, Please try again.");
+                    }
 
                  
               }
