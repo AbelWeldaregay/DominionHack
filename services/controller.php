@@ -36,4 +36,24 @@ include_once "services.php";
 
  }
 
+  if(isset($_POST['registerProvider'])) {
+
+ 	$name = $_POST["name"];
+ 	$email = $_POST["email"];
+ 	$phoneNumber = $_POST["phoneNumber"];
+ 	$address = $_POST["address"];
+ 	$age = $_POST["age"];
+ 	$gender = $_POST["gender"];
+ 	$password = $_POST["password"];
+	$service = $_POST["service"];
+	$experience = $_POST["experience"];
+
+	$webService = new webService();
+	$result = $webService -> insertProvider($name, $email, $phoneNumber, $address, $age, $gender, $password, $service, $experience);
+	
+	echo $result;
+
+ }
+
+
 ?>

@@ -33,33 +33,35 @@
                 <div class="card-heading"></div>
                 <div class="card-body">
                     <h2 class="title">Provider Registration</h2>
-                    <form method="POST">
+                    <form method="POST" id="providerRegistrationForum">
                         <div class="input-group">
-                            <input class="input--style-1" type="text" placeholder="NAME" name="name">
+                            <input class="input--style-1" type="text" placeholder="NAME" id="nameInput" name="name" required>
                         </div>
                        <div class="input-group">
-                            <input class="input--style-1" type="email" placeholder="EMAIL" name="email">
+                            <input class="input--style-1" type="email" placeholder="EMAIL" id="emailInput" name="email" required>
                         </div>
                         <div class="input-group">
-                            <input class="input--style-1" type="tel" placeholder="PHONE NUMBER" name="phonenumber">
+                             <input class="input--style-1" type="password" id="passwordInput" placeholder="PASSWORD" name="password" minlength="8" required>
                         </div>
                         <div class="input-group">
-                            <input class="input--style-1" type="tel" placeholder="ADDRESS" name="address">
+                            <input class="input--style-1" type="tel" placeholder="PHONE NUMBER" id="phonenumberInput" name="phonenumber" required>
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-1" type="tel" placeholder="ADDRESS" name="address" id="addressInput" required>
                         </div>
                         
 
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <input class="input--style-1 js-datepicker" type="text" placeholder="BIRTHDATE" name="birthday">
-                                    <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                                    <input class="input--style-1" type="tel" placeholder="AGE" name="age" id="ageInput" required>
                                 </div>
 
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="gender">
+                                        <select id="genderInput" name="gender" required>
                                             <option disabled="disabled" selected="selected">GENDER</option>
                                             <option>Male</option>
                                             <option>Female</option>
@@ -72,7 +74,7 @@
                         </div>
                         <div class="input-group">
                             <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="class">
+                                <select name="class" id="serviceInput" required>
                                     <option disabled="disabled" selected="selected">SERVICE</option>
                                     <option>service 1</option>
                                     <option>service 2</option>
@@ -84,11 +86,11 @@
 
                         <div class="input-group">
                             <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="class">
+                                <select name="class" id="experienceInput" required>
                                     <option disabled="disabled" selected="selected">EXPERIENCE</option>
                                     <option>0 - 2 years</option>
                                     <option>2 - 5 years</option>
-                                    <option>5 + years</option>
+                                    <option>5 + years  </option>
                                 </select>
                                 <div class="select-dropdown"></div>
                             </div>
@@ -114,14 +116,5 @@
     <script src="js/global.js"></script>
 
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
--email
--phonenumber
--address
-
-
-//provider
--all fields customer has
--service providing
--experience- range drop down
 </html>
 <!-- end document-->

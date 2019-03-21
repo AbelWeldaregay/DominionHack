@@ -74,6 +74,57 @@ $( document ).ready(function() {
 
 
    var customerRegisterForm = $('#customerRegisterForm');
+   var providerRegisterForm = $('#providerRegistrationForum');
+
+
+   providerRegisterForm.on("submit", function(e) {
+
+        e.preventDefault();
+
+        var name = document.getElementById("nameInput").value;
+        var email = document.getElementById("emailInput").value;
+        var phoneNumber = document.getElementById("phonenumberInput").value;
+        var address = document.getElementById("addressInput").value;
+        var age = document.getElementById("ageInput").value;
+        var gender = document.getElementById("genderInput").value;
+        var service = document.getElementById("serviceInput").value;
+        var experience = document.getElementById("experienceInput").value;
+        var password = document.getElementById("emailInput").value;
+
+            $.ajax({
+
+           url : '../services/controller.php',
+           type : 'POST',
+           data : {
+           "name" : name,
+           "email" : email,
+           "phoneNumber" : phoneNumber,
+           "address" : address,
+           "age" : age,
+           "gender" : gender,
+           "service" : service,
+           "experience" : experience,
+           "password" : password,
+           "registerProvider" : "registerProvider"
+      
+          },
+          
+          success : function(data) {   
+            alert(data);
+            if(data == "providerExists")
+            {
+                alert("Account with this email exists, please login using this email.");
+            } else {
+                alert("Successfully created account, please login");
+                location.reload();
+            }
+          }
+    });
+
+
+
+   });
+
 
    customerRegisterForm.on("submit", function(e) {
         e.preventDefault();

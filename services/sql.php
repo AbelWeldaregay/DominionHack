@@ -23,10 +23,24 @@ class SqlService {
 
 	}
 
+	public function providerExistsSql($email) {
+
+		$sql = "SELECT * FROM Providers WHERE email = '$email'";
+		return $sql;
+	}
+
 	public function userExistsSql($email) {
 
 		$sql = "SELECT * FROM Customers WHERE email = '$email'";
 		return $sql;
+	}
+
+	public function insertProviderSql($name, $email, $phoneNumber, $address, $age, $gender, $password, $service, $experience) {
+
+		$sql = "INSERT INTO Providers (name, email, password, age, gender, address, cellPhone, experience, service ) VALUES ('$name', '$email', '$password', '$age', '$gender', '$address','$phoneNumber', '$experience', '$service')";
+
+		return $sql;
+
 	}
 	
 }

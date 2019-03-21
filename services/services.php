@@ -28,6 +28,35 @@ class WebService {
 
 	}
 
+
+	public function insertProvider($name, $email, $phoneNumber, $address, $age, $gender, $password, $service, $experience) {
+
+		$database_connection = new DatabaseConnection();
+  	    $conn = $database_connection->getConnection();
+		$sql_service = new SqlService();
+		
+		$providerExistsSql = $sql_service->providerExistsSql($email);
+
+		$providerExistsResult = $conn->query($providerExistsSql);
+
+		if($providerExistsResult->num_rows > 0) {
+		
+			echo "providerExists";
+		
+		} else {
+
+			$insertProviderSql = $sql_service->insertProviderSql($name, $email, $phoneNumber, $address, $age, $gender, $password, $service, $experience);
+
+			$result = $conn->query($insertProviderSql);
+
+			echo "success";
+
+
+		}		
+
+
+	}
+
 	public function insertCustomer($name, $email, $phoneNumber, $address, $age, $gender, $password){
 
 		$database_connection = new DatabaseConnection();
@@ -52,7 +81,6 @@ class WebService {
 
 		}
 
-		
 		$conn->close();
 
 	}
