@@ -49,12 +49,12 @@
 $('.customerButton').on('click', function(e){
 
     //location.replace("file:///Users/abelweldareguy/Downloads/colorlib-regform-1/customerRegister.html");
-    window.location.href = "file:///Users/abelweldareguy/Downloads/colorlib-regform-1/customerRegister.html";
+    window.location.href = "http://qav2.cs.odu.edu/abel/DomHack/colorlib-regform-1/customerRegister.html";
 });
 
 $('.providerButton').on('click', function(e){
 
-    window.location.href = "file:///Users/abelweldareguy/Downloads/colorlib-regform-1/providerRegistration.html";
+    window.location.href = "http://qav2.cs.odu.edu/abel/DomHack/colorlib-regform-1/providerRegistration.html";
 
 
 });
