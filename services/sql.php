@@ -14,6 +14,14 @@ class SqlService {
 		return $sql;
 
 	}
+
+	public function insertCustomerSql($name, $email, $phoneNumber, $address, $age, $gender, $password) {
+
+		$sql = "INSERT INTO Customers (name, email, password, age, gender, address, cellPhone) VALUES ('$name', '$email', '$password', '$age', '$gender', '$address', '$phoneNumber')";
+
+		return $sql;
+
+	}
 	
 }
 

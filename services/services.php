@@ -24,7 +24,25 @@ class WebService {
 			echo "false";
 		}
 
+		$conn->close();
+
 	}
+
+	public function insertCustomer($name, $email, $phoneNumber, $address, $age, $gender, $password){
+
+		$database_connection = new DatabaseConnection();
+  	    $conn = $database_connection->getConnection();
+		$sql_service = new SqlService();
+
+		$insertCustomerSql = $sql_service->insertCustomerSql($name, $email, $phoneNumber, $address, $age, $gender, $password);
+
+		$result = $conn->query($insertCustomerSql);
+		
+		$conn->close();
+
+	}
+
+
 
 }
 

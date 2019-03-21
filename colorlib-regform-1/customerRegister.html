@@ -10,7 +10,7 @@
     <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
-    <title>Au Register Forms by Colorlib</title>
+    <title>HomeService</title>
 
     <!-- Icons font CSS-->
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
@@ -33,31 +33,31 @@
                 <div class="card-heading"></div>
                 <div class="card-body">
                     <h2 class="title">Customer Registration</h2>
-                    <form method="POST">
+                    <form id="customerRegisterForm" method="POST">
                         <div class="input-group">
-                            <input class="input--style-1" type="text" placeholder="NAME" name="name">
+                            <input class="input--style-1" type="text" placeholder="NAME" name="name" id="nameInput" required>
                         </div>
                        <div class="input-group">
-                            <input class="input--style-1" type="email" placeholder="EMAIL" name="email">
+                            <input class="input--style-1" type="email" placeholder="EMAIL" name="email" id="emailInput" required>
                         </div>
                         <div class="input-group">
-                            <input class="input--style-1" type="tel" placeholder="PHONE NUMBER" name="phonenumber">
+                             <input class="input--style-1" type="password" id="passwordInput" placeholder="PASSWORD" name="password" minlength="8" required>
                         </div>
                         <div class="input-group">
-                            <input class="input--style-1" type="tel" placeholder="ADDRESS" name="address">
+                            <input class="input--style-1" type="tel" placeholder="PHONE NUMBER" name="phonenumber" id="phonenumberInput" required>
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-1" type="tel" placeholder="ADDRESS" name="address" id="addressInput" required>
                         </div>
                         <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <input class="input--style-1 js-datepicker" type="text" placeholder="BIRTHDATE" name="birthday">
-                                    <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
-                                </div>
-
-                            </div>
+                        
+                        <div class="input-group">
+                            <input class="input--style-1" type="text" placeholder="AGE" name="email" id="ageInput" required>
+                        </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="gender">
+                                        <select name="gender" id="genderInput" required>
                                             <option disabled="disabled" selected="selected">GENDER</option>
                                             <option>Male</option>
                                             <option>Female</option>
@@ -87,6 +87,7 @@
 
     <!-- Main JS-->
     <script src="js/global.js"></script>
+    <script type="js/customerRegister.js"></script>
 
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 

@@ -68,3 +68,56 @@
     
 
 })(jQuery);
+
+
+$( document ).ready(function() {
+
+
+   var customerRegisterForm = $('#customerRegisterForm');
+
+   customerRegisterForm.on("submit", function(e) {
+        e.preventDefault();
+
+        var name = document.getElementById("nameInput").value;
+        var email = document.getElementById("emailInput").value;
+        var phoneNumber = document.getElementById("phonenumberInput").value;
+        var address = document.getElementById("addressInput").value;
+        var age = document.getElementById("ageInput").value;
+        var gender = document.getElementById("genderInput").value;
+        var password = document.getElementById("passwordInput").value;
+          
+        $.ajax({
+
+               url : '../services/controller.php',
+               type : 'POST',
+               data : {
+               "name" : name,
+               "email" : email,
+               "phoneNumber" : phoneNumber,
+               "address" : address,
+               "age" : age,
+               "gender" : gender,
+               "password" : password,
+               "registerCustomer" : "registerCustomer"
+          
+              },
+              
+              success : function(data) {   
+                
+                console.log(data);
+                    
+              }
+        }); 
+
+
+
+
+
+   });
+
+
+
+
+
+
+});
