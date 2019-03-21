@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Service Providers</title>
+<script>
+function timeSlot() {
+	var popup = document.getElementById("popUp");
+	popup.classList.toggle("show");
+	}
+</script>
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+	
+	.checked {
+        color: orange;
+    }
+	
+ </style> 
+ </head>
+ <body>
+   <table>
+     <tr>
+	   <th>Name</th>
+	   <th>Service</th>
+	   <th>Rating</th>
+	   <th>Make a booking</th>
+	 </tr>
+	 <tr>
+	   <td>Oliver Silver</td>
+	   <td>Homecleaning and Repairs</td>
+	   <td><span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star"></span></td>
+	   <td><a href="book">Book</a></td>	    
+	 </tr>
+	 <tr>
+	   <td>Bill Cipher</td>
+       <td>Homecleaning and Repairs</td>
+       <td><span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span></td>
+       <td><a href="book">Book</a></td>		   
+	 </tr>
+	 <tr>
+	   <td>Rick Sanchez</td>
+	   <td>Homecleaning and Repairs</td>
+	   <td><span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span></td>
+	   <td><a href="book">Book</a></td>	   
+	 </tr>
+     <tr>
+       <td>Morty Smith</td>
+       <td>Appliance Repair</td>
+       <td><span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star"></span>
+           <span class="fa fa-star"></span></td>
+	   <td><a href="book">Book</a></td>   
+     </tr>
+     <tr>
+       <td>Jerry Smith</td>
+       <td>Appliance Repair</td>
+       <td><span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star"></span>
+           <span class="fa fa-star"></span></td>
+	   <td><a href="book">Book</a></td>
+     </tr>
+     <tr>
+       <td>Stanley Pines</td>
+       <td>Appliance Repair</td>
+       <td><span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span></td>
+       <td><a href="book">Book</a></td>
+	 </tr>
+     <tr>
+	   <td>Mabel Pines</td>
+	   <td>Weddings and Events</td>
+	   <td><span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span></td>
+	   <td><a href="book">Book</a></td>
+	 </tr>
+	 <tr>
+	   <td>Summer Smith</td>
+       <td>Weddings and Events</td>
+       <td><span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star"></span></td>
+	   <td><a href="book">Book</a></td>   
+     </tr>
+	 <tr>
+	   <td>Pomona Sprout</td>
+	   <td>Weddings and Events</td>
+	   <td><span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span></td>
+	   <td><a href="book">Book</a></td>	   
+     <tr>
+       <td>Stanford Pines</td>
+       <td>Tutoring</td>
+       <td><span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star"></span></td>
+       <td><a href="book">Book</a></td>
+	 </tr>
+     <tr>
+       <td>Remus Lupin</td>
+       <td>Tutoring</td>
+       <td><span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span></td>
+       <td><a href="book">Book</a></td>
+	 </tr>
+     <tr>
+       <td>Severus Snape</td>
+       <td>Tutoring</td>
+       <td><span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star"></span>
+           <span class="fa fa-star"></span></td>
+       <td><a href="book">Book</a></td>
+	 </tr>
+     <tr>
+       <td>Charlie Weasley</td>
+       <td>Health and Fitness</td>
+       <td><span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star"></span></td>
+	   <td><a href="book">Book</a></td>   
+     </tr>
+     <tr>
+       <td>Rubeus Hagrid</td>
+       <td>Health and Fitness</td>
+       <td><span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star"></span></td>
+       <td><a href="book">Book</a></td>
+	 </tr>
+     <tr>
+       <td>Oliver Wood</td>
+       <td>Health and Fitness</td>
+       <td><span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span></td>
+  	   <td><a href="book">Book</a></td>
+	 </tr>
+     <tr>
+       <td>Fred Weasley</td>
+       <td>Business and Taxes</td>
+       <td><span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span></td>
+       <td><a href="book">Book</a></td>
+	 </tr>
+	 <tr>
+       <td>Bojack Horseman</td>
+       <td>Business and Taxes</td>
+       <td><span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star"></span>
+           <span class="fa fa-star"></span></td>
+       <td><a href="book">Book</a></td>
+	 </tr>
+     <tr>
+       <td>Lakshmipathy</td>
+       <td>Business and Taxes</td>
+       <td><span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star"></span></td>
+       <td><a href="book">Book</a></td>
+	 </tr>
+     <tr>
+       <td>Pansy Parkinson</td>
+       <td>Beauty</td>
+       <td><span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star"></span>
+           <span class="fa fa-star"></span></td>
+       <td><a href="book">Book</a></td>
+	 </tr>
+     <tr>
+       <td>Sai Kiran</td>
+       <td>Beauty</td>
+       <td><span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star"></span></td>
+       <td><a href="book">Book</a></td>
+	 </tr>
+     <tr>
+       <td>Rita Skeeter</td>
+       <td>Beauty</td>
+       <td><span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star"></span>
+           <span class="fa fa-star"></span></td>
+       <td><a href="book">Book</a></td>
+	 </tr>	   
+   </table>
+   </body>   
