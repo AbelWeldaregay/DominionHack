@@ -28,6 +28,32 @@ class WebService {
 
 	}
 
+	public function fetchAllProviders() {
+
+		$database_connection = new DatabaseConnection();
+		$conn = $database_connection->getConnection();
+		$sql_service = new SqlService();
+		$fetchAllProvidersSql = $sql_service->fetchAllProvidersSql();
+
+		$result = $conn->query($fetchAllProvidersSql);
+
+		if($result->num_rows > 0) {
+
+			while ($row = $result->fetch_assoc()) {
+
+				$data["providers"][] = $row;
+
+
+			}
+
+			$conn->close();
+			return json_encode($data);
+
+		}
+
+
+	}
+
 
 	public function insertProvider($name, $email, $phoneNumber, $address, $age, $gender, $password, $service, $experience) {
 

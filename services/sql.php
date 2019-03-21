@@ -23,6 +23,14 @@ class SqlService {
 
 	}
 
+	public function fetchAllProvidersSql() {
+
+		$sql = "SELECT * FROM Providers";
+
+		return $sql;
+
+	}
+
 	public function providerExistsSql($email) {
 
 		$sql = "SELECT * FROM Providers WHERE email = '$email'";
