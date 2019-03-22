@@ -7,7 +7,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="services.js"></script>
-<title>Service Providers</title>
+<title>SEVVA</title>
 <script>
 function timeSlot() {
 	var popup = document.getElementById("popUp");
@@ -46,7 +46,7 @@ function timeSlot() {
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>                        
                     </button>
-                    <a href="https://google.com" style="color:#660033"><b>Home Service</b><img src="icon.png" style="height:50px;"></a>
+                    <a href="http://qav2.cs.odu.edu/abel/DomHack/services.php" style="color:#660033"><b>SEVAA</b><img src="icon.png" style="height:50px;"></a>
                     
                   </div>
                   <div class="collapse navbar-collapse" id="myNavbar">

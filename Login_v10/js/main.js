@@ -52,6 +52,12 @@ $('.customerButton').on('click', function(e){
 
 });
 
+$('.beautyButton').on('click', function(e){
+
+    window.location.href = "http://qav2.cs.odu.edu/abel/DomHack/services.php";
+
+});
+
 $('.loginButton').on('click', function(e){
 
     var email = document.getElementById('usernameInput').value;
@@ -72,7 +78,7 @@ $('.loginButton').on('click', function(e){
                 console.log(data);
                     
                     if(data == "true") {
-                    window.location.href = "http://qav2.cs.odu.edu/abel/DomHack/home.html";
+                    window.location.href = "http://qav2.cs.odu.edu/abel/DomHack/Home.html";
                     } else {
                         alert("Wrong password, Please try again.");
                     }

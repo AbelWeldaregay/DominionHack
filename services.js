@@ -1,6 +1,15 @@
 $( document ).ready(function() {
 
 
+$('.viewButon').on('click', function(e){
+
+
+    
+
+
+});
+
+
 $('.bookButton').on('click', function(e){
 
 	// var bookTime = $("#4time").val();
@@ -27,11 +36,12 @@ $('.bookButton').on('click', function(e){
                 console.log(data);
                 
                 if(data == "success") {
-                  alert("appointment booked!");
-
-
                   
-                }
+                  alert("appointment booked!");
+                  window.location.href = "http://qav2.cs.odu.edu/abel/DomHack/Home.html";
+                  
+                  
+                } 
                
                 
                  
