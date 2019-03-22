@@ -55,6 +55,20 @@ class WebService {
 	}
 
 
+	public function insertAppointment($serviceId, $appointmentTime, $appointmentDate, $status) {
+
+		$database_connection = new DatabaseConnection();
+		$conn = $database_connection->getConnection();
+		$sql_service = new SqlService();
+		$insertAppointmentSql = $sql_service->insertAppointmentSql($serviceId, $appointmentTime, $appointmentDate, $status);
+
+
+		$result = $conn->query($insertAppointmentSql);
+
+		$conn->close();
+
+	}
+
 	public function insertProvider($name, $email, $phoneNumber, $address, $age, $gender, $password, $service, $experience) {
 
 		$database_connection = new DatabaseConnection();

@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/home.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="services.js"></script>
 <title>Service Providers</title>
 <script>
 function timeSlot() {
@@ -60,6 +63,8 @@ function timeSlot() {
 	   <th>Name</th>
 	   <th>Service</th>
 	   <th>Rating</th>
+     <th>Pick Time</th>
+     <th>Pick Date</th>
 	   <th>Book a Service</th>
 	 </tr>
 
@@ -97,7 +102,7 @@ function timeSlot() {
           echo "<span class='fa fa-star unchecked'></span></td>";
 
         } else if ($providers["providers"][$i]["reviewPoints"] == 2)
-        {
+        { 
           echo "<td> <span class='fa fa-star checked'></span>";
           echo "<span class='fa fa-star checked'></span>";
           echo "<span class='fa fa-star unchecked'></span>";
@@ -124,33 +129,21 @@ function timeSlot() {
           echo "<span class='fa fa-star checked'></span>";
           echo "<span class='fa fa-star checked'></span>";
           echo "<span class='fa fa-star checked'></span></td>";
-        }
-
-        echo "<td><a id='". $providers["providers"][$i]["email"] . "' href = 'book'>Book</a></td>"; 
+        } 
 
 
+          echo "<td><input id='" . $providers["providers"][$i]["id"] . "time" .  "' type='time' /></td>";
+          echo "<td><input id='" . $providers["providers"][$i]["id"] . "date" .  "' type='date' /></td>";
+          echo "<td><button class='bookButton' value='"  . $providers["providers"][$i]["email"] . "|" . $providers["providers"][$i]["id"] . "'>Book</button></td>"; 
+          echo "<input id='serviceName' type='hidden' value = '" . $providers["providers"][$i]["service"] . "' />";
+          echo "</tr>";
 
-        echo "</tr>";
+
 
 
     }
     
-
-
-
    ?>
-   
-<!-- 	 <tr>
-	   <td>Oliver Silver</td>
-	   <td>Homecleaning and Repairs</td>
-	   <td><span class="fa fa-star checked"></span>
-           <span class="fa fa-star checked"></span>
-           <span class="fa fa-star checked"></span>
-           <span class="fa fa-star checked"></span>
-           <span class="fa fa-star"></span></td>
-	   <td><a href="book">Book</a></td>	    
-	 </tr> -->
-
    
    </table>
    </body>   

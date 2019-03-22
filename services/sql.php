@@ -31,6 +31,15 @@ class SqlService {
 
 	}
 
+	public function insertAppointmentSql($serviceId, $appointmentTime, $appointmentDate, $status) {
+
+		$sql = "INSERT INTO serviceLogs (customerId, providerId, status, appointmentTime, appointmentDate) 
+		VALUES ('1', '$serviceId', 1, '$appointmentTime', '$appointmentDate')";
+
+		return $sql;
+
+	}
+
 	public function providerExistsSql($email) {
 
 		$sql = "SELECT * FROM Providers WHERE email = '$email'";

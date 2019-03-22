@@ -36,6 +36,22 @@ include_once "services.php";
 
  }
 
+
+ if(isset($_POST['bookAppointment'])) {
+
+	$serviceId = $_POST["serviceId"];
+	$appointmentTime = $_POST["appointmentTime"];
+	$appointmentDate = $_POST["appointmentDate"];
+	$status = $_POST["status"];
+
+	$webService = new webService();
+
+	$result = $webService -> insertAppointment($serviceId, $appointmentTime, $appointmentDate, $status);
+	echo "success";
+	
+
+ }
+
   if(isset($_POST['registerProvider'])) {
 
  	$name = $_POST["name"];
