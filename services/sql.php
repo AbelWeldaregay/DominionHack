@@ -23,6 +23,13 @@ class SqlService {
 
 	}
 
+	public function loginProviderSql($email, $password) {
+
+		$sql = "SELECT * FROM Providers WHERE email = '$email' AND password = '$password'";
+		return $sql;
+
+	}
+
 	public function fetchAllProvidersSql() {
 
 		$sql = "SELECT * FROM Providers";

@@ -19,9 +19,23 @@ class WebService {
 
 		if ($result->num_rows > 0) {
 			 
-			echo "true";
+			echo "customer";
 		} else {
-			echo "false";
+			
+			$loginProviderSql = $sql_service->loginProviderSql($email, $password);
+
+			$result = $conn->query($loginProviderSql);
+
+			if ($result->num_rows > 0) {
+			
+				echo "provider";
+			
+			} else {
+
+				echo "false";
+		
+			}
+
 		}
 
 		$conn->close();

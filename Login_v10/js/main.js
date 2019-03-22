@@ -77,8 +77,12 @@ $('.loginButton').on('click', function(e){
               success : function(data) {   
                 console.log(data);
                     
-                    if(data == "true") {
-                    window.location.href = "http://qav2.cs.odu.edu/abel/DomHack/Home.html";
+                    if(data == "customer") {
+                         window.location.href = "http://qav2.cs.odu.edu/abel/DomHack/Home.html";
+                    } else if(data == "provider") {
+                       
+                         window.location.href = "http://qav2.cs.odu.edu/abel/DomHack/providerLogs.php";
+
                     } else {
                         alert("Wrong password, Please try again.");
                     }
